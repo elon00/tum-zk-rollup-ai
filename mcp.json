@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "tum-zk-rollup-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "TUM Munich",
+        "PROJECT_TICKER": "TUMZK"
+      },
+      "tools": [
+        {
+          "name": "verify_tumzk_invariants",
+          "description": "Verifies deterministic invariants for TUM ZK-Rollup AI on TUM Munich."
+        },
+        {
+          "name": "execute_tumzk_action",
+          "description": "Executes authenticated Zero Knowledge state transition."
+        }
+      ]
+    }
+  }
+}
